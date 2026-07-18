@@ -1,0 +1,3157 @@
+/*
+Theme Name: Dubez Academy Theme
+Author: Dubez Academy
+Version: 1.0
+Description: Custom elite school theme.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fa;
+    color: #111827;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ================= NAVIGATION ================= */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #0b132b;
+}
+
+.nav-links a {
+    margin-left: 35px;
+    text-decoration: none;
+    color: #0b132b;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background: #c6a85b;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        110deg,
+        rgba(5,10,25,0.96) 45%,
+        rgba(5,10,25,0.85) 70%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    color: #ffffff;
+}
+
+.hero-label {
+    color: #c6a85b;
+    letter-spacing: 6px;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 92px;
+    font-weight: 700;
+    line-height: 0.95;
+    margin-bottom: 35px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #d1d5db;
+    margin-bottom: 60px;
+    max-width: 600px;
+}
+
+/* ================= BUTTON SYSTEM ================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.btn-primary {
+    position: relative;
+    background: linear-gradient(135deg, #c6a85b, #e6c87a);
+    color: #050a19;
+    padding: 18px 50px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: 0 15px 40px rgba(198,168,91,0.45);
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.5),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: 0.6s ease;
+}
+
+.btn-primary:hover::before {
+    transform: translateX(100%);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+}
+
+.btn-secondary {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 18px 50px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: #050a19;
+}
+
+/* ================= PERFORMANCE SECTION ================= */
+
+.performance-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
+    padding: 120px 80px;
+}
+
+.performance-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.performance-container h2 {
+    font-size: 64px;
+    margin-bottom: 25px;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: #c6a85b;
+    margin: 0 auto 80px auto;
+}
+
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.metric-card {
+    background: #ffffff;
+    padding: 60px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.metric-card h3 {
+    font-size: 64px;
+    color: #c6a85b;
+    margin-bottom: 15px;
+}
+
+.metric-card p {
+    color: #374151;
+}
+
+/* ================= AUTHORITY SECTION ================= */
+
+/* ================= AUTHORITY SECTION (ELITE VERSION) ================= */
+
+/* ================= DOMINANT AUTHORITY SECTION ================= */
+
+.authority-section {
+    background: #020510;
+    padding: 220px 80px;
+    position: relative;
+}
+
+.authority-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 140px;
+    align-items: center;
+}
+
+.authority-tag {
+    color: #c6a85b;
+    letter-spacing: 8px;
+    font-size: 11px;
+    margin-bottom: 30px;
+}
+
+.authority-text h2 {
+    font-size: 88px;
+    line-height: 0.9;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.authority-text p {
+    font-size: 20px;
+    color: #9ca3af;
+    margin-bottom: 50px;
+    max-width: 500px;
+}
+
+.authority-divider {
+    width: 100px;
+    height: 3px;
+    background: #c6a85b;
+    margin-bottom: 50px;
+}
+
+.authority-points {
+    list-style: none;
+}
+
+.authority-points li {
+    margin-bottom: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 18px;
+    position: relative;
+    padding-left: 24px;
+}
+
+.authority-points li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background: #c6a85b;
+}
+
+.authority-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 60px 140px rgba(0,0,0,0.7);
+}
+
+/* ================= ADMISSION PROCESS ================= */
+
+.admission-process {
+    background: #ffffff;
+    padding: 160px 80px;
+}
+
+.admission-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.admission-container h2 {
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.process-step span {
+    font-size: 42px;
+    color: #c6a85b;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.process-step h3 {
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* ================= ACADEMIC PATHWAY ================= */
+
+.academic-pathway {
+    background: #f0f2f5;
+    padding: 160px 80px;
+}
+
+.pathway-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.pathway-left h2 {
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.pathway-left p {
+    margin-bottom: 30px;
+    color: #6b7280;
+}
+
+.pathway-left ul {
+    list-style: none;
+}
+
+.pathway-left ul li {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.pathway-right img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* ================= PLATFORM SHOWCASE ================= */
+
+.platform-showcase {
+    background: #0b132b;
+    color: #ffffff;
+    padding: 160px 80px;
+    text-align: center;
+}
+
+.platform-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.platform-container h2 {
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.platform-card {
+    background: rgba(255,255,255,0.06);
+    padding: 60px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.platform-card h3 {
+    color: #c6a85b;
+    margin-bottom: 15px;
+}
+
+/* ================= CTA SECTION ================= */
+
+.cta-section {
+    background: #0b132b;
+    color: #ffffff;
+    padding: 140px 80px;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-container h2 {
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+
+.cta-container p {
+    color: #d1d5db;
+    margin-bottom: 50px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #020510;
+    padding: 100px 80px 40px 80px;
+    color: #d1d5db;
+}
+
+.footer-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 100px;
+}
+
+.footer-brand h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    color: #c6a85b;
+}
+
+.footer-column a {
+    display: inline-block;
+    text-decoration: none;
+    color: #d1d5db;
+    margin-bottom: 10px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.footer-column a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: #c6a85b;
+    transition: width 0.3s ease;
+}
+
+.footer-column a:hover::after {
+    width: 100%;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+}
+
+/* ================= ACADEMIC FRAMEWORK (SPLIT LAYOUT) ================= */
+
+.framework-section {
+    background: #ffffff;
+    padding: 160px 80px;
+}
+
+.framework-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.framework-left h2 {
+    font-size: 56px;
+    margin-bottom: 25px;
+}
+
+.framework-left p {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.framework-points {
+    list-style: none;
+}
+
+.framework-points li {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #0b132b;
+}
+
+.framework-right img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+
+/* ===== SECTION TRANSITION SMOOTHNESS ===== */
+
+section {
+    position: relative;
+}
+
+section + section {
+    border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+/* ===== HEADING PRECISION ===== */
+
+.performance-container h2,
+.authority-text h2,
+.framework-left h2,
+.cta-container h2 {
+    letter-spacing: 0.5px;
+    line-height: 1.05;
+}
+
+.metric-card,
+.framework-card,
+.platform-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover,
+.framework-card:hover,
+.platform-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+    transform: translateY(-1px);
+}
+
+/* ===== CURSOR GLOW ===== */
+
+.cursor-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(198,168,91,0.25) 0%,
+        rgba(198,168,91,0.15) 40%,
+        rgba(198,168,91,0.05) 60%,
+        transparent 70%
+    );
+    z-index: 0;
+}
+
+/* ================= ELITE LOGIN ================= */
+
+/* ================= ELITE LOGIN SPLIT ================= */
+
+.elite-login {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE */
+
+.login-left {
+    flex: 1;
+    background: linear-gradient(
+        120deg,
+        #0b132b,
+        #050a19
+    );
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+}
+
+.login-branding h1 {
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+
+.login-branding p {
+    font-size: 18px;
+    color: #c6a85b;
+}
+
+/* RIGHT SIDE */
+
+.login-right {
+    flex: 1;
+    background: #f5f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-panel {
+    width: 400px;
+    padding: 60px;
+    background: #ffffff;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+.login-panel h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#elite-login-form input[type="text"],
+#elite-login-form input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+
+#elite-login-form input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #c6a85b, #e6c87a);
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#elite-login-form input[type="submit"]:hover {
+    transform: translateY(-2px);
+}
+
+/* ===============================
+   PORTAL ACCESS PAGE
+=================================*/
+
+.portal-hero {
+    background: linear-gradient(135deg, #0b1c2d, #132c46);
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.portal-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.portal-hero p {
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+.portal-grid-section {
+    padding: 80px 40px;
+    background: #f7f9fc;
+}
+
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.portal-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    border-top: 4px solid #d4af37;
+}
+
+.portal-card:hover {
+    transform: translateY(-6px);
+}
+
+.portal-card h3 {
+    margin-bottom: 15px;
+    color: #0b1c2d;
+}
+
+.portal-card p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.portal-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0b1c2d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.portal-btn:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+.portal-nav-btn {
+    background: #d4af37;
+    color: #0b1c2d !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.portal-nav-btn:hover {
+    background: #0b1c2d;
+    color: #ffffff !important;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+/* ==========================
+   ELITE LOGIN FORM STYLING
+========================== */
+
+.login-panel form p {
+    margin-bottom: 18px;
+}
+
+.login-panel label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0b1c2d;
+}
+
+.login-panel input[type="text"],
+.login-panel input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.login-panel input[type="text"]:focus,
+.login-panel input[type="password"]:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+.login-panel button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #d4af37, #c5a028);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-panel button:hover {
+    background: #0b1c2d;
+    color: #fff;
+}
+
+
+/* ==========================================
+   FIX FIXED HEADER CONTENT OVERLAP
+========================================== */
+
+body {
+    padding-top: 90px; /* Adjust if header height changes */
+}
+
+/* ==========================================
+   PORTAL SESSION BAR
+========================================== */
+
+.portal-session {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 30px;
+}
+
+.session-user {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b1c2d;
+}
+
+.session-logout {
+    padding: 6px 14px;
+    background: #d4af37;
+    color: #0b1c2d;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.session-logout:hover {
+    background: #0b1c2d;
+    color: #fff;
+}
+
+.portal-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.role-badge {
+    background: #0b1c2d;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   PORTAL NAVIGATION
+========================================== */
+
+.portal-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.portal-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #0b1c2d;
+    transition: 0.3s ease;
+}
+
+.portal-nav a:hover {
+    color: #d4af37;
+}
+
+.role-badge {
+    background: #0b1c2d;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.portal-logout {
+    padding: 6px 14px;
+    background: #d4af37;
+    color: #0b1c2d !important;
+    border-radius: 4px;
+}
+
+.portal-logout:hover {
+    background: #0b1c2d;
+    color: #fff !important;
+}
+
+/* ==========================================
+   HEADER STRUCTURE
+========================================== */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 999;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 80px;
+}
+
+/* Prevent content overlap */
+body {
+    padding-top: 100px;
+}
+
+/* Logo */
+.logo a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    color: #0b1c2d;
+}
+
+/* Navigation Lists */
+.nav-links ul,
+.portal-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a,
+.portal-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #0b1c2d;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.portal-nav a:hover {
+    color: #d4af37;
+}
+
+/* Portal Button */
+.portal-nav-btn {
+    background: #d4af37;
+    color: #0b1c2d !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+/* Role Badge */
+.role-badge {
+    background: linear-gradient(135deg, #0b1c2d, #132c46);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Logout Button */
+.portal-logout {
+    background: #d4af37;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   TEACHER DASHBOARD ELEVATION
+========================================== */
+
+.teacher-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.teacher-dashboard h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.teacher-dashboard h2 {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.teacher-dashboard .card,
+.teacher-dashboard .dashboard-card {
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.teacher-dashboard table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.teacher-dashboard .tabs {
+    margin-top: 30px;
+}
+
+.teacher-dashboard button,
+.teacher-dashboard input[type="submit"] {
+    border-radius: 6px;
+}
+
+/* ==========================================
+   TEACHER DASHBOARD REFINEMENT
+========================================== */
+
+.teacher-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.teacher-dashboard h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.teacher-dashboard .dashboard-subtitle {
+    color: #6b7280;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* ==========================================
+   METRIC CARD UPGRADE
+========================================== */
+
+.teacher-dashboard .metric-card,
+.teacher-dashboard .card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.teacher-dashboard .metric-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: #0b1c2d;
+}
+
+.teacher-dashboard .metric-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.teacher-dashboard .metric-card h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.teacher-dashboard section {
+    margin-bottom: 50px;
+}
+
+/* Improve plugin tabs appearance */
+
+.teacher-dashboard .tabs {
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 30px;
+}
+
+.teacher-dashboard .tabs a {
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+.teacher-dashboard .tabs .active {
+    border-bottom: 3px solid #0b1c2d;
+}
+
+.teacher-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.teacher-dashboard table th {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+}
+
+.teacher-dashboard table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.teacher-dashboard section {
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+.teacher-dashboard input,
+.teacher-dashboard select,
+.teacher-dashboard textarea {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 10px 14px;
+    width: 100%;
+}
+
+.teacher-dashboard button {
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   METRIC CARD COLOR VARIANTS
+========================================== */
+
+.metric-card.students::before {
+    background: #0b1c2d;
+}
+
+.metric-card.grading::before {
+    background: #f59e0b;
+}
+
+.metric-card.attendance::before {
+    background: #10b981;
+}
+
+/* ==========================================
+   AUTO COLOR METRIC CARDS (NO PLUGIN EDIT)
+========================================== */
+
+.teacher-dashboard .metric-card:nth-child(1)::before {
+    background: #0b1c2d;
+}
+
+.teacher-dashboard .metric-card:nth-child(2)::before {
+    background: #f59e0b;
+}
+
+.teacher-dashboard .metric-card:nth-child(3)::before {
+    background: #10b981;
+}
+
+/* ==========================================
+   DUBEZ METRIC CARD UPGRADE
+========================================== */
+
+.dubez-metric-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dubez-metric-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: #0b1c2d;
+}
+
+/* Color Variants by Position */
+.dubez-metric-card:nth-child(1)::before {
+    background: #0b1c2d; /* Students */
+}
+
+.dubez-metric-card:nth-child(2)::before {
+    background: #f59e0b; /* Grading */
+}
+
+.dubez-metric-card:nth-child(3)::before {
+    background: #10b981; /* Attendance */
+}
+
+.dubez-metric-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   METRIC NUMBER EMPHASIS
+========================================== */
+
+.dubez-metric-card h3,
+.dubez-metric-card .metric-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0b1c2d;
+    margin-bottom: 8px;
+}
+
+.dubez-metric-card p,
+.dubez-metric-card .metric-label {
+    font-size: 14px;
+    color: #6b7280;
+    letter-spacing: 0.3px;
+}
+
+.dubez-metric-card {
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teacher-dashboard .dubez-metric-card {
+    margin-bottom: 20px;
+}
+
+.teacher-dashboard .tabs {
+    margin-top: 40px;
+}
+
+/* ==========================================
+   DASHBOARD CONTAINMENT
+========================================== */
+
+.teacher-dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+body {
+    background: linear-gradient(
+        to bottom,
+        #f8fafc 0%,
+        #eef2f7 100%
+    );
+}
+
+.dubez-metric-card {
+    margin-right: 15px;
+}
+
+.dubez-metric-card:last-child {
+    margin-right: 0;
+}
+
+.teacher-dashboard h1 {
+    margin-bottom: 15px;
+}
+
+.teacher-dashboard .dubez-metric-card {
+    margin-bottom: 25px;
+}
+
+.teacher-dashboard .tabs {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.teacher-dashboard section {
+    margin-bottom: 45px;
+}
+
+.teacher-dashboard .tabs a {
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.teacher-dashboard .tabs a.active {
+    background: #0b1c2d;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.teacher-dashboard .tabs a:hover {
+    background: #f3f4f6;
+}
+
+.teacher-dashboard .dubez-metric-card {
+    max-width: 340px;
+}
+
+/* ==========================================
+   DASHBOARD FRAME
+========================================== */
+
+.teacher-dashboard {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.teacher-dashboard .container {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 50px;
+    box-shadow: 0 30px 80px rgba(11,28,45,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.dubez-metric-card {
+    background: #f9fafb;
+    border: 1px solid #e2e8f0;
+}
+
+.dubez-metric-card h3 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+body {
+    background: #f5f7fa;
+}
+
+/* ==========================================
+   PORTAL BRAND STRIP
+========================================== */
+
+.teacher-dashboard::before {
+    content: '';
+    display: block;
+    height: 6px;
+    background: linear-gradient(90deg, #0b1c2d, #132c46);
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 30px;
+}
+
+.dubez-metric-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.teacher-dashboard .tabs a.active {
+    background: #0b1c2d;
+    color: #ffffff !important;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.teacher-dashboard h1 {
+    font-size: 36px;
+    letter-spacing: -0.5px;
+}
+
+.teacher-dashboard h1 {
+    margin-bottom: 8px;
+}
+
+.teacher-dashboard p {
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   TEACHER GRADING UI
+========================================== */
+
+.dubez-notice {
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.dubez-notice.success {
+    background: #10b981;
+    color: #ffffff;
+}
+
+.dubez-notice.error {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.dubez-submissions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.dubez-submissions-table th {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+}
+
+.dubez-submissions-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.grade-form {
+    display: flex;
+    gap: 8px;
+}
+
+.grade-input {
+    width: 90px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.grade-btn {
+    background: #0b1c2d;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   URGENCY SIGNALING FOR PENDING GRADING
+========================================== */
+
+.dubez-metric-card.pending-active {
+    border-left: 6px solid #ef4444;
+    box-shadow: 0 20px 45px rgba(239, 68, 68, 0.15);
+}
+
+.dubez-metric-card.pending-active .metric-value {
+    color: #ef4444;
+}
+
+/* ==========================================
+   TEACHER URGENCY SIGNALING
+========================================== */
+
+.dubez-metric-card.pending-active {
+    border-left: 5px solid #ef4444 !important;
+    box-shadow: 0 20px 45px rgba(239, 68, 68, 0.15);
+}
+
+.dubez-metric-card.pending-active h2 {
+    color: #ef4444;
+}
+
+.urgency-badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+/* ==========================================
+   TEACHER FILTER BAR
+========================================== */
+
+.grading-filter-bar {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #0b1c2d;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.filter-btn.secondary {
+    background: #e5e7eb;
+    color: #0b1c2d;
+}
+
+/* Highlight Ungraded */
+.ungraded-row {
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.ungraded-row td {
+    border-left: 3px solid #ef4444;
+}
+
+.graded-row {
+    opacity: 0.85;
+}
+
+/* ==========================================
+   STUDENT PORTAL CONTEXT
+========================================== */
+
+.student-context-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.student-subtitle {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.student-badge {
+    background: linear-gradient(135deg, #0b1c2d, #132c46);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   STUDENT PERFORMANCE CARDS
+========================================== */
+
+.student-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.student-metric-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.05);
+    border-left: 6px solid #0b1c2d;
+}
+
+.student-metric-card h3 {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.metric-value {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0b1c2d;
+}
+
+.student-portal select,
+.student-portal textarea,
+.student-portal input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 10px 14px;
+    margin-bottom: 15px;
+}
+
+.student-portal button {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.student-portal table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.student-portal table th {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+}
+
+.student-portal table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ==========================================
+   STUDENT PORTAL REBUILD
+========================================== */
+
+.student-portal {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.student-portal .container {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(11,28,45,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+/* Header */
+.student-header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.student-header-block h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.student-subtitle {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.student-session-badge {
+    background: linear-gradient(135deg, #0b1c2d, #132c46);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Metrics */
+.student-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.student-metric-card {
+    background: #f9fafb;
+    border-radius: 14px;
+    padding: 25px;
+    border-left: 6px solid #0b1c2d;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.05);
+}
+
+.student-metric-card h3 {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.metric-value {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0b1c2d;
+}
+
+/* Sections */
+.student-section {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.student-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Forms */
+.student-portal select,
+.student-portal textarea,
+.student-portal input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 10px 14px;
+    margin-bottom: 15px;
+}
+
+.student-portal button {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Grades Table */
+.student-portal table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.student-portal table th {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+}
+
+.student-portal table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ==========================================
+   STUDENT PORTAL ELITE STYLING
+========================================== */
+
+.student-portal {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.student-portal .container {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(11,28,45,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+/* Header */
+.student-header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.student-header-block h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.student-subtitle {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.student-session-badge {
+    background: linear-gradient(135deg, #0b1c2d, #132c46);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.student-performance-status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.student-performance-status.excellent {
+    background: #10b981;
+    color: #ffffff;
+}
+
+.student-performance-status.good {
+    background: #0b1c2d;
+    color: #ffffff;
+}
+
+.student-performance-status.satisfactory {
+    background: #f59e0b;
+    color: #ffffff;
+}
+
+.student-performance-status.warning {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+/* Metrics */
+.student-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.student-metric-card {
+    background: #f9fafb;
+    border-radius: 14px;
+    padding: 25px;
+    border-left: 6px solid #0b1c2d;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.05);
+}
+
+.student-metric-card h3 {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.metric-value {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0b1c2d;
+}
+
+/* Sections */
+.student-section {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.student-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Forms */
+.student-portal select,
+.student-portal textarea,
+.student-portal input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 10px 14px;
+    margin-bottom: 15px;
+}
+
+.student-portal button {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Grades Table */
+.student-portal table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.student-portal table th {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+}
+
+.student-portal table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.student-portal table td:nth-child(3) {
+    font-weight: 700;
+}
+
+.student-portal table td:nth-child(3):contains("A") {
+    color: #10b981;
+}
+
+.student-portal table td:nth-child(3):contains("B") {
+    color: #0b1c2d;
+}
+
+.student-portal table td:nth-child(3):contains("C"),
+.student-portal table td:nth-child(3):contains("D"),
+.student-portal table td:nth-child(3):contains("F") {
+    color: #ef4444;
+}
+
+.student-portal .success,
+.student-portal .notice-success {
+    background: #10b981;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   STUDENT PORTAL ADVANCED STYLING
+========================================== */
+
+.student-performance-status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.student-performance-status.excellent {
+    background: #10b981;
+    color: #ffffff;
+}
+
+.student-performance-status.good {
+    background: #0b1c2d;
+    color: #ffffff;
+}
+
+.student-performance-status.satisfactory {
+    background: #f59e0b;
+    color: #ffffff;
+}
+
+.student-performance-status.warning {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+/* Performance Bar */
+.performance-bar-wrapper {
+    margin-bottom: 40px;
+}
+
+.performance-bar {
+    width: 100%;
+    height: 14px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.performance-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0b1c2d, #10b981);
+    transition: width 0.6s ease;
+}
+
+.performance-label {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Attendance Rate Card Variation */
+.student-metric-card:nth-child(3) {
+    border-left: 6px solid #10b981;
+}
+
+.submission-file {
+    margin-top: 8px;
+}
+
+.submission-file-link {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #0b1c2d;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.submission-file-link:hover {
+    background: #132c46;
+}
+
+.admin-alert-panel {
+    background: #fff4f4;
+    border-left: 6px solid #ef4444;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.admin-alert-panel h3 {
+    margin-bottom: 10px;
+    color: #b91c1c;
+}
+
+.admin-alert-panel ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.at-risk-list {
+    margin-top: 15px;
+    background: #fff8f8;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.at-risk-list ul {
+    margin: 8px 0 0 18px;
+}
+
+
+/* ==========================================
+   PARENT PORTAL STYLING
+========================================== */
+
+.parent-portal {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.parent-portal .container {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(11,28,45,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.parent-header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.parent-header-block h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.parent-subtitle {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.parent-session-badge {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.parent-section {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.parent-summary-status {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.parent-summary-status.safe {
+    background: #10b981;
+    color: #ffffff;
+}
+
+.parent-summary-status.risk {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.parent-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.parent-metric-card {
+    background: #f9fafb;
+    border-radius: 14px;
+    padding: 25px;
+    border-left: 6px solid #0b1c2d;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.05);
+}
+
+.parent-metric-card h3 {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.teacher-upload-wrapper {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.upload-field {
+    margin-bottom: 15px;
+}
+
+.upload-field input,
+.upload-field textarea,
+.upload-field select {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.upload-btn {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.teacher-section {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.teacher-assignment-form .upload-field {
+    margin-bottom: 15px;
+}
+
+.teacher-assignment-form input,
+.teacher-assignment-form textarea,
+.teacher-assignment-form select {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.teacher-assignment-form button {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.portal-section-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   TEACHER PORTAL STRUCTURE
+========================================== */
+
+.teacher-portal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.teacher-portal .container {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(11,28,45,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.teacher-header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.teacher-header-block h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.teacher-subtitle {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.teacher-session-badge {
+    background: #0b1c2d;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.teacher-section {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.teacher-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.teacher-tabs a {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #e5e7eb;
+    text-decoration: none;
+    color: #0b1c2d;
+    font-weight: 600;
+}
+
+.teacher-tabs a.active {
+    background: #0b1c2d;
+    color: #ffffff;
+}
+
+.teacher-section form p {
+    margin-bottom: 18px;
+}
+
+.teacher-section input,
+.teacher-section textarea,
+.teacher-section select {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 10px 14px;
+}
+
+.teacher-section button {
+    background: #0b1c2d;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: none;
+}
+
+/* ==========================================
+   FORCE TEACHER METRICS HORIZONTAL LAYOUT
+========================================== */
+
+.dubez-metrics-grid {
+    display: flex !important;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.dubez-metric-card {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* ================================
+   TEACHER DASHBOARD – FULL CARD STYLE
+================================ */
+
+.teacher-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.teacher-card {
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Card 1 - Assignments */
+.teacher-card:nth-child(1) {
+    background: linear-gradient(135deg, #f3f2ed, #f7f6f2);
+    border-left: 5px solid #2c2c2c;
+}
+
+/* Card 2 - Submissions */
+.teacher-card:nth-child(2) {
+    background: linear-gradient(135deg, #faf6e6, #fffaf0);
+    border-left: 5px solid #d4a017;
+}
+
+/* Card 3 - Pending (Red) */
+.teacher-card:nth-child(3) {
+    background: linear-gradient(135deg, #fdf2f2, #fff5f5);
+    border-left: 5px solid #b91c1c;
+}
+
+/* Card 4 - Class Average */
+.teacher-card:nth-child(4) {
+    background: linear-gradient(135deg, #f1f5f9, #f8fafc);
+    border-left: 5px solid #0b1f3a;
+}
+
+.teacher-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #b88a1b;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.teacher-card-value {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Pending Grades value emphasized */
+.teacher-card:nth-child(3) .teacher-card-value {
+    color: #b91c1c;
+}
+
+
+.admin-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.admin-card {
+    background:#f8f8f6;
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.admin-card h3 {
+    color:#b88a1b;
+    margin-bottom:10px;
+}
+
+.admin-card span {
+    font-size:28px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.admin-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.admin-card {
+    background: #f8f8f6;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-3px);
+}
+
+.admin-title {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #b88a1b;
+    margin-bottom: 10px;
+}
+
+.admin-value {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.alert-card {
+    border-left: 4px solid #b91c1c;
+}
+
+/* ==========================================
+   CONSOLIDATED RESPONSIVE SYSTEM
+========================================== */
+
+/* --- TABLETS & LANDSCAPE PHONES (Max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    /* Global Section Settings */
+    section {
+        padding: 80px 40px;
+    }
+    
+    /* Layout Grids */
+    .performance-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .framework-container,
+    .authority-container,
+    .pathway-container {
+        gap: 50px;
+    }
+
+    .authority-text h2 {
+        font-size: 64px;
+    }
+    
+    /* Portal Layouts */
+    .teacher-dashboard-grid,
+    .parent-metrics,
+    .student-metrics {
+        grid-template-columns: repeat(2, 1fr) !important;
+        display: grid !important;
+        gap: 20px !important;
+    }
+}
+
+/* --- SMALL TABLETS & PORTRAIT TABLETS (Max-width: 992px) --- */
+@media (max-width: 992px) {
+    /* Global Padding */
+    section {
+        padding: 60px 30px;
+    }
+
+    /* Headings Scaling */
+    .hero h1 {
+        font-size: 56px;
+    }
+
+    .authority-text h2 {
+        font-size: 48px;
+    }
+
+    .framework-left h2,
+    .pathway-left h2,
+    .platform-container h2,
+    .admission-container h2,
+    .cta-container h2 {
+        font-size: 42px;
+    }
+    
+    /* Stacking Split Layouts */
+    .framework-container,
+    .authority-container,
+    .pathway-container,
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .framework-right,
+    .authority-image,
+    .pathway-right {
+        order: 2; /* Move images below text */
+    }
+
+    .framework-left,
+    .authority-text,
+    .pathway-left {
+        order: 1;
+    }
+
+    .hero {
+        padding: 0 40px;
+    }
+    
+    /* Header Block elements in portals */
+    .teacher-header-block,
+    .student-header-block,
+    .parent-header-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .teacher-session-badge,
+    .student-session-badge,
+    .parent-session-badge {
+        align-self: flex-start;
+    }
+}
+
+/* --- PHONES (Max-width: 768px) --- */
+@media (max-width: 768px) {
+    /* Global Settings */
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    /* Containers */
+    .container {
+        padding: 0 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Fonts */
+    h1, .hero h1 {
+        font-size: 38px !important;
+        line-height: 1.15;
+    }
+
+    h2, 
+    .performance-container h2,
+    .framework-left h2,
+    .authority-text h2,
+    .admission-container h2,
+    .pathway-left h2,
+    .platform-container h2,
+    .cta-container h2 {
+        font-size: 30px !important;
+    }
+
+    p {
+        font-size: 15px !important;
+    }
+
+    /* Navigation Menu Toggle System */
+    .nav-toggle {
+        display: block !important;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #0b132b;
+        cursor: pointer;
+        padding: 5px;
+        margin-left: auto;
+        z-index: 1001;
+    }
+
+    .nav-links,
+    .portal-nav {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 20px 30px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+
+    /* Toggle menu drawer active state */
+    .nav-links.show,
+    .portal-nav.show {
+        display: flex !important;
+    }
+
+    /* Stack links vertically and clean up spacing */
+    .nav-links ul,
+    .portal-nav ul {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links li,
+    .portal-nav li {
+        width: 100%;
+    }
+
+    .nav-links a,
+    .portal-nav a {
+        display: block;
+        width: 100%;
+        margin-left: 0 !important; /* Reset desktop offset */
+        padding: 10px 0;
+        font-size: 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-links a::after,
+    .portal-nav a::after {
+        display: none; /* Hide hover line effect on mobile drawer */
+    }
+
+    /* Portal CTA styling inside mobile drawer */
+    .portal-nav-btn {
+        display: inline-block !important;
+        text-align: center;
+        width: 100% !important;
+        background: #d4af37;
+        color: #0b1c2d !important;
+        padding: 12px 20px !important;
+        border-radius: 6px;
+        border: none;
+        margin-top: 5px;
+    }
+
+    /* Hero Section Phone Styles */
+    .hero {
+        height: auto !important;
+        min-height: 85vh;
+        padding: 120px 20px 80px 20px !important; /* Leave space for fixed header */
+        align-items: center;
+    }
+
+    .hero-content {
+        padding: 0 !important;
+        text-align: center;
+    }
+
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100% !important;
+        text-align: center;
+        padding: 16px 30px;
+        font-size: 15px;
+    }
+
+    /* Grid layout stackers */
+    .performance-grid,
+    .process-grid,
+    .platform-grid,
+    .footer-links {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 60px 20px 30px 20px !important;
+    }
+
+    .footer-inner {
+        text-align: center;
+        gap: 50px;
+    }
+
+    .footer-brand {
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-column a {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    /* Authority Section Point spacing */
+    .authority-section {
+        padding: 85px 20px !important;
+    }
+
+    .authority-text p {
+        max-width: 100%;
+    }
+
+    /* Portal metrics adjustment */
+    .teacher-dashboard-grid,
+    .parent-metrics,
+    .student-metrics {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        display: grid !important;
+    }
+
+    .dubez-metric-card,
+    .student-metric-card,
+    .parent-metric-card,
+    .teacher-card {
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        padding: 20px !important;
+    }
+
+    /* Forms */
+    .teacher-section,
+    .student-section,
+    .parent-section {
+        padding: 20px !important;
+    }
+
+    .teacher-tabs {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .teacher-tabs a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* Responsive Data Tables */
+    .dubez-submissions-table,
+    .student-portal table,
+    .parent-portal table,
+    table.widefat {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        margin-top: 15px;
+        border: 1px solid #e5e7eb;
+    }
+
+    /* Split Screens Login Override */
+    .elite-login {
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: 100vh;
+        background: #f5f7fa;
+    }
+
+    .login-left {
+        padding: 60px 20px !important;
+        text-align: center;
+        flex: none !important;
+        width: 100% !important;
+    }
+
+    .login-branding h1 {
+        font-size: 36px;
+    }
+
+    .login-right {
+        padding: 40px 15px !important;
+        flex: none !important;
+        width: 100% !important;
+        background: transparent;
+    }
+
+    .login-panel {
+        width: 100% !important;
+        max-width: 440px !important;
+        padding: 30px 20px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+}
+
+/* --- SUPER SMALL PHONES (Max-width: 480px) --- */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px !important;
+    }
+
+    .nav-container {
+        padding: 15px !important;
+    }
+
+    .portal-hero h1 {
+        font-size: 28px;
+    }
+}
+
+/* ==========================================
+   PORTAL DARK MODE INTEGRATION
+========================================== */
+
+/* Theme Toggle Button Style */
+.mode-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mode-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode Overrides */
+.dark-mode body {
+    background: #090d16 !important;
+    color: #f3f4f6 !important;
+}
+
+.dark-mode .main-header {
+    background: rgba(17, 24, 39, 0.75) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark-mode .logo a,
+.dark-mode .nav-links a,
+.dark-mode .portal-nav a {
+    color: #ffffff !important;
+}
+
+.dark-mode .nav-links,
+.dark-mode .portal-nav {
+    background: #111827 !important;
+    border-top-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark-mode .mode-toggle {
+    background: #1f2937;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* Dashboard Containers & Sections */
+.dark-mode .teacher-portal .container,
+.dark-mode .student-portal .container,
+.dark-mode .parent-portal .container,
+.dark-mode .teacher-section,
+.dark-mode .student-section,
+.dark-mode .parent-section,
+.dark-mode .platform-card,
+.dark-mode .portal-card,
+.dark-mode .admin-card,
+.dark-mode .teacher-upload-wrapper,
+.dark-mode .admin-alert-panel,
+.dark-mode .at-risk-list {
+    background: #111827 !important;
+    border-color: #1f2937 !important;
+    color: #f3f4f6 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Metric Cards */
+.dark-mode .dubez-metric-card,
+.dark-mode .student-metric-card,
+.dark-mode .parent-metric-card,
+.dark-mode .teacher-card,
+.dark-mode .admin-card {
+    background: #1f2937 !important;
+    border-color: #374151 !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Text Enhancements inside Cards */
+.dark-mode .teacher-card-title,
+.dark-mode .student-metric-card h3,
+.dark-mode .parent-metric-card h3,
+.dark-mode .admin-title,
+.dark-mode .portal-section-title,
+.dark-mode .teacher-tabs a {
+    color: #e6c87a !important;
+}
+
+.dark-mode .teacher-card-value,
+.dark-mode .student-metric-card .metric-value,
+.dark-mode .parent-metric-card .metric-value,
+.dark-mode .admin-value,
+.dark-mode .teacher-tabs a.active {
+    color: #ffffff !important;
+}
+
+.dark-mode .teacher-tabs a {
+    background: #1f2937 !important;
+    border: 1px solid #374151 !important;
+}
+
+.dark-mode .teacher-tabs a.active {
+    background: #e6c87a !important;
+    color: #050a19 !important;
+    border-color: #e6c87a !important;
+}
+
+.dark-mode .student-subtitle,
+.dark-mode .teacher-subtitle,
+.dark-mode .parent-subtitle,
+.dark-mode .performance-label,
+.dark-mode .process-step p,
+.dark-mode .platform-card p,
+.dark-mode .cta-container p,
+.dark-mode .footer-brand p {
+    color: #9ca3af !important;
+}
+
+/* List Items / Announcements */
+.dark-mode li[style*="background:#f3f4f6"],
+.dark-mode div[style*="background:#f3f4f6"],
+.dark-mode .student-section li,
+.dark-mode .teacher-section li,
+.dark-mode .parent-section li {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+    border: 1px solid #374151 !important;
+}
+
+/* Table Design in Portal Pages */
+.dark-mode table,
+.dark-mode th,
+.dark-mode td {
+    border-color: #374151 !important;
+    color: #e5e7eb !important;
+}
+
+.dark-mode th {
+    background: #1f2937 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode tr {
+    background: #111827 !important;
+}
+
+.dark-mode tr:nth-child(even),
+.dark-mode table.striped tbody tr:nth-child(even) {
+    background: #1f2937 !important;
+}
+
+/* Forms & Text Areas */
+.dark-mode input[type="text"],
+.dark-mode input[type="password"],
+.dark-mode input[type="number"],
+.dark-mode input[type="email"],
+.dark-mode select,
+.dark-mode text_area,  /* Support generic plugins */
+.dark-mode textarea,
+.dark-mode .teacher-assignment-form input,
+.dark-mode .teacher-assignment-form textarea,
+.dark-mode .teacher-assignment-form select {
+    background: #1f2937 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+}
+
+.dark-mode input:focus,
+.dark-mode select:focus,
+.dark-mode textarea:focus {
+    outline: 2px solid #e6c87a !important;
+    border-color: transparent !important;
+}
+
+/* Form Buttons */
+.dark-mode button,
+.dark-mode input[type="submit"],
+.dark-mode .upload-btn,
+.dark-mode .teacher-assignment-form button,
+.dark-mode .portal-btn {
+    background: linear-gradient(135deg, #c6a85b, #e6c87a) !important;
+    color: #050a19 !important;
+    font-weight: 700 !important;
+}
+
+.dark-mode button:hover,
+.dark-mode input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(198, 168, 91, 0.35);
+}
+
+.dark-mode hr {
+    border-color: #374151 !important;
+}
+
+.dark-mode .performance-bar {
+    background: #374151 !important;
+}
+
+.dark-mode .performance-fill {
+    background: linear-gradient(90deg, #e6c87a, #10b981) !important;
+}
+
+.dark-mode .admin-alert-panel h3 {
+    color: #f87171 !important;
+}
+
+/* Portal Access and Grid page */
+.dark-mode .portal-hero {
+    background: linear-gradient(135deg, #050a14, #0b1c2d) !important;
+}
+.dark-mode .portal-grid-section {
+    background: #090d16 !important;
+}
+.dark-mode .portal-card {
+    border-top-color: #e6c87a !important;
+}
+.dark-mode .portal-card h3 {
+    color: #e6c87a !important;
+}
+.dark-mode .portal-card p {
+    color: #9ca3af !important;
+}
+
+/* Login Screen Dark Mode */
+.dark-mode .elite-login {
+    background: #090d16 !important;
+}
+.dark-mode .login-right {
+    background: #090d16 !important;
+}
+.dark-mode .login-panel {
+    background: #111827 !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid #1f2937 !important;
+}
+.dark-mode .login-panel h2 {
+    color: #e6c87a !important;
+}
+.dark-mode #elite-login-form label {
+    color: #e5e7eb !important;
+}
+.dark-mode #elite-login-form input[type="text"],
+.dark-mode #elite-login-form input[type="password"] {
+    background: #1f2937 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+}
+.dark-mode #elite-login-form input[type="submit"] {
+    background: linear-gradient(135deg, #c6a85b, #e6c87a) !important;
+    color: #050a19 !important;
+}
