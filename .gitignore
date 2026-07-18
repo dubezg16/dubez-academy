@@ -1,0 +1,20 @@
+# Ignore local configurations and logs from Local WP
+conf/
+logs/
+
+# Ignore Node dependencies
+node_modules/
+**/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp / backup files
+*.tmp
+~$*
+.envrc
+local-xdebuginfo.php
+
+# WordPress uploads (exclude large media files)
+app/public/wp-content/uploads/
