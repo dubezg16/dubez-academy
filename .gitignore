@@ -18,3 +18,9 @@ local-xdebuginfo.php
 
 # WordPress uploads (exclude large media files)
 app/public/wp-content/uploads/
+
+# Log files
+*.log
+**/debug.log
+**/logs/
+
